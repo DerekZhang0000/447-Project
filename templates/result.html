@@ -1,0 +1,18 @@
+<!-- result.html -->
+<html>
+<head>
+    <title>Query Result</title>
+</head>
+<body>
+    <h1>Query Result:</h1>
+    <table border="1">
+        {% for row in rows %}
+            <tr>
+                {% for value in row %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
