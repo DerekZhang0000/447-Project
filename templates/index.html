@@ -1,10 +1,39 @@
 <!-- index.html -->
 <html>
 <head>
-    <title>SQL Query</title>
+    <title>USAS DB</title>
 </head>
 <body>
-    <h1>Enter your SQL query:</h1>
+    <h1>United States Association of Shipyards (USAS) Official Database</h1>
+
+    <h2>Perform Specific Queries:</h2>
+    <form action="/get_military_ships" method="get">
+        <input type="submit" value="Get All Military Ships">
+    </form>
+
+    <form action="/count_military_ships_by_builder" method="get">
+        <input type="submit" value="Count Military Ships by Builder">
+    </form>
+
+    <form action="/list_all_ships_and_dates" method="get">
+        <input type="submit" value="List All Ships and Construction Dates">
+    </form>
+
+    <h2>Perform Location-Based Query:</h2>
+    <form action="/query_specific_location" method="post">
+        <label for="location">Enter Deployment Location:</label><br>
+        <input type="text" id="location" name="location"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Perform Date-Based Query:</h2>
+    <form action="/query_specific_date" method="post">
+        <label for="date">Enter Commission Date (M/D/YYYY):</label><br>
+        <input type="text" id="date" name="date"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Enter custom SQL query:</h2>
     <form action="/query" method="post">
         <textarea name="query" rows="5" cols="50"></textarea><br>
         <input type="submit" value="Submit">
